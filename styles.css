@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInContainer 1s ease-in-out;
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+    animation: fadeInHeading 1s ease-in-out;
+}
+
+@keyframes fadeInHeading {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    margin-left: 5px;
+    animation: slideInLabel 1s ease-in-out;
+}
+
+@keyframes slideInLabel {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideInInput 1s ease-in-out;
+}
+
+@keyframes slideInInput {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #f093fb;
+    box-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+    outline: none;
+}
+
+
+button[type="submit"] {
+    background-color: #f5576c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    animation: pulseButton 1s infinite alternate ease-in-out;
+}
+
+@keyframes pulseButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+button[type="submit"]:hover {
+    background-color: #d94b66;
+    transform: translateY(-5px);
+}
+
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+    animation: fadeInSignup 1s ease-in-out;
+}
+
+@keyframes fadeInSignup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-link a {
+    color: #f5576c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #d94b66;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #f5576c;
+    font-size: 14px;
+    margin-top: 5px;
+    animation: slideInError 1s ease-in-out;
+}
+
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 300px;
+        padding: 30px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 8px;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .error-message {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        max-width: 350px;
+        padding: 40px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .error-message {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 500px;
+        padding: 60px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    button[type="submit"] {
+        padding: 18px 36px;
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .error-message {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+}
